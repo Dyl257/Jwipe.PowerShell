@@ -1,16 +1,19 @@
-<h1>JWipe - Disk Sanitization</h1>
+<h1>File Integrity Monitor</h1>
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+ ### [YouTube Demonstration](https://youtu.be/Vn_L0xCZq7M?si=85hbWY88JREd2cCz)
 
 <h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
+The File Integrity Monitor is a PowerShell script that creates a baseline of file hashes from a designated folder and then continuously monitors for any changes. If a file is added, modified, or deleted, the script immediately alerts you by comparing current file hashes with the saved baseline, helping you quickly identify any unauthorized changes.
 <br />
 
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>The project is implemented entirely in PowerShell.</b> 
+- <b>Get-FileHash: For computing cryptographic hashes using the SHA512 algorithm.</b>
+- <b>Get-ChildItem: To enumerate files within a specified directory.</b>
+- <b>Start-Sleep: To create delays during continuous monitoring.</b>
+- <b>Test-Path, Remove-Item, Write-Host, and Read-Host: For file operations and user interaction.</b>
 
 <h2>Environments Used </h2>
 
